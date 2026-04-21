@@ -20,26 +20,26 @@ agents:
   - '📘 CORE - 🧩 Requirements Analyst'
   - '📘 CORE - 🧠 Explainer'
 handoffs:
-  - label: Implement in Java
+  - label: CA - CA - Implement in Java
     agent: '💻 DEV - ☕ Java Developer'
     prompt: Implement the requested change in Java using the context gathered above.
-    send: false
-  - label: Implement in Python
+    send: true
+  - label: CA - CA - Implement in Python
     agent: '💻 DEV - 🐍 Python Developer'
     prompt: Implement the requested change in Python using the context gathered above.
-    send: false
-  - label: Debug this issue
+    send: true
+  - label: CA - CA - Debug this issue
     agent: '💻 DEV - 🔍 Debug'
     prompt: Investigate and resolve the reported issue using the available context.
-    send: false
-  - label: Review changes
+    send: true
+  - label: CA - CA - Review changes
     agent: '📝 REVIEW - 👀 Reviewer'
     prompt: Review the current change set and report bugs, regressions, and validation gaps.
-    send: false
-  - label: Analyze requirements
+    send: true
+  - label: CA - CA - Analyze requirements
     agent: '📘 CORE - 🧩 Requirements Analyst'
     prompt: Analyze the requirements and prepare an actionable implementation breakdown.
-    send: false
+    send: true
 ---
 
 # Context

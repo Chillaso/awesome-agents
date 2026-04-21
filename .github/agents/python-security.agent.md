@@ -6,10 +6,10 @@ model: ['GPT-5.4 (copilot)', 'Claude Sonnet 4.6 (copilot)']
 tools: ['agent', 'read', 'search', 'todo']
 agents: ['💻 DEV - 🐍 Python Developer']
 handoffs:
-  - label: Apply Python security fixes
+  - label: CA - Apply Python security fixes
     agent: '💻 DEV - 🐍 Python Developer'
     prompt: Apply the security mitigations identified in the Python review above.
-    send: false
+    send: true
 ---
 
 # Context

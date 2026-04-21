@@ -6,18 +6,18 @@ model: ['GPT-5.4 (copilot)', 'Claude Sonnet 4.6 (copilot)']
 tools: ['agent', 'read', 'search', 'edit', 'execute', 'todo']
 agents: ['💻 DEV - 🧪 Python Tester']
 handoffs:
-  - label: Write Python tests
+  - label: CA - Write Python tests
     agent: '💻 DEV - 🧪 Python Tester'
     prompt: Add or update Python tests for the implementation above.
-    send: false
-  - label: Review Python quality
+    send: true
+  - label: CA - Review Python quality
     agent: '🔍 QA&SEC - ✅ Python QA'
     prompt: Review the Python implementation above for quality, consistency, and coverage gaps.
-    send: false
-  - label: Python security review
+    send: true
+  - label: CA - Python security review
     agent: '🔍 QA&SEC - 🔐 Python Security'
     prompt: Review the Python implementation above for security risks and mitigation needs.
-    send: false
+    send: true
 ---
 
 # Context

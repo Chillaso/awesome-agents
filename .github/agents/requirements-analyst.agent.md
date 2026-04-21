@@ -5,10 +5,10 @@ argument-hint: Inputs should include a markdown document with functional require
 model: ['Claude Opus 4.6 (copilot)', 'GPT-5.4 (copilot)']
 tools: ['read', 'search', 'edit', 'todo']
 handoffs:
-  - label: Start implementation
+  - label: CA - Start implementation
     agent: '🎯 ORCH - 🧭 Orchestrator'
     prompt: Use this requirements analysis to coordinate implementation with the appropriate worker agents.
-    send: false
+    send: true
 ---
 
 # Context

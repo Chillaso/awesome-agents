@@ -6,18 +6,18 @@ model: ['GPT-5.4 (copilot)', 'Claude Sonnet 4.6 (copilot)']
 tools: ['agent', 'read', 'search', 'edit', 'execute', 'todo']
 agents: ['💻 DEV - 🧪 Java Tester']
 handoffs:
-  - label: Write Java tests
+  - label: CA - Write Java tests
     agent: '💻 DEV - 🧪 Java Tester'
     prompt: Add or update Java tests for the implementation above.
-    send: false
-  - label: Review Java quality
+    send: true
+  - label: CA - Review Java quality
     agent: '🔍 QA&SEC - ✅ Java QA'
     prompt: Review the Java implementation above for quality, consistency, and coverage gaps.
-    send: false
-  - label: Java security review
+    send: true
+  - label: CA - Java security review
     agent: '🔍 QA&SEC - 🔐 Java Security'
     prompt: Review the Java implementation above for security risks and mitigation needs.
-    send: false
+    send: true
 ---
 
 # Context

@@ -6,14 +6,14 @@ model: ['GPT-5.4 (copilot)', 'Claude Sonnet 4.6 (copilot)']
 tools: ['agent', 'read', 'search', 'todo']
 agents: ['💻 DEV - 🐍 Python Developer', '💻 DEV - 🧪 Python Tester']
 handoffs:
-  - label: Fix Python quality issues
+  - label: CA - Fix Python quality issues
     agent: '💻 DEV - 🐍 Python Developer'
     prompt: Address the Python quality issues identified in the review above.
-    send: false
-  - label: Add missing Python tests
+    send: true
+  - label: CA - Add missing Python tests
     agent: '💻 DEV - 🧪 Python Tester'
     prompt: Add or improve Python tests to close the review gaps identified above.
-    send: false
+    send: true
 ---
 
 # Context

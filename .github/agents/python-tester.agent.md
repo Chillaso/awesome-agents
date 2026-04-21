@@ -6,14 +6,14 @@ argument-hint: Inputs should include the Python code to validate, the test frame
 model: ['GPT-5.4 mini (copilot)', 'Claude Haiku 4.5 (copilot)']
 tools: ['read', 'search', 'edit', 'execute', 'todo']
 handoffs:
-  - label: Implementation needed
+  - label: CA - Implementation needed
     agent: '💻 DEV - 🐍 Python Developer'
     prompt: The tests indicate implementation changes are needed. Update the Python code accordingly.
-    send: false
-  - label: QA review
+    send: true
+  - label: CA - QA review
     agent: '🔍 QA&SEC - ✅ Python QA'
     prompt: Review the Python change and its tests for quality and coverage sufficiency.
-    send: false
+    send: true
 ---
 
 # Context

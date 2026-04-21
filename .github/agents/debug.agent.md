@@ -6,14 +6,14 @@ model: ['GPT-5.4 (copilot)', 'Claude Sonnet 4.6 (copilot)']
 tools: ['agent', 'edit/editFiles', 'search', 'execute/getTerminalOutput', 'execute/runInTerminal', 'read/terminalLastCommand', 'read/terminalSelection', 'search/usages', 'read/problems', 'execute/testFailure', 'web/fetch', 'web/githubRepo', 'execute/runTests']
 agents: ['💻 DEV - ☕ Java Developer', '💻 DEV - 🐍 Python Developer']
 handoffs:
-  - label: Apply Java fix
+  - label: CA - Apply Java fix
     agent: '💻 DEV - ☕ Java Developer'
     prompt: Implement the Java-side fix for the root cause identified above.
-    send: false
-  - label: Apply Python fix
+    send: true
+  - label: CA - Apply Python fix
     agent: '💻 DEV - 🐍 Python Developer'
     prompt: Implement the Python-side fix for the root cause identified above.
-    send: false
+    send: true
 ---
 
 # Context

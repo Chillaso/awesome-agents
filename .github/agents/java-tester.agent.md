@@ -6,14 +6,14 @@ argument-hint: Inputs should include the Java code to validate, the test framewo
 model: ['GPT-5.4 mini (copilot)', 'Claude Haiku 4.5 (copilot)']
 tools: ['read', 'search', 'edit', 'execute', 'todo']
 handoffs:
-  - label: Implementation needed
+  - label: CA - Implementation needed
     agent: '💻 DEV - ☕ Java Developer'
     prompt: The tests indicate implementation changes are needed. Update the Java code accordingly.
-    send: false
-  - label: QA review
+    send: true
+  - label: CA - QA review
     agent: '🔍 QA&SEC - ✅ Java QA'
     prompt: Review the Java change and its tests for quality and coverage sufficiency.
-    send: false
+    send: true
 ---
 
 # Context

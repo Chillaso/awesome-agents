@@ -6,14 +6,14 @@ model: ['GPT-5.4 (copilot)', 'Claude Sonnet 4.6 (copilot)']
 tools: ['agent', 'read', 'search', 'todo']
 agents: ['💻 DEV - ☕ Java Developer', '💻 DEV - 🧪 Java Tester']
 handoffs:
-  - label: Fix Java quality issues
+  - label: CA - Fix Java quality issues
     agent: '💻 DEV - ☕ Java Developer'
     prompt: Address the Java quality issues identified in the review above.
-    send: false
-  - label: Add missing Java tests
+    send: true
+  - label: CA - Add missing Java tests
     agent: '💻 DEV - 🧪 Java Tester'
     prompt: Add or improve Java tests to close the review gaps identified above.
-    send: false
+    send: true
 ---
 
 # Context

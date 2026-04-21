@@ -6,10 +6,10 @@ model: ['GPT-5.4 (copilot)', 'Claude Sonnet 4.6 (copilot)']
 tools: ['agent', 'read', 'search', 'todo']
 agents: ['💻 DEV - ☕ Java Developer']
 handoffs:
-  - label: Apply Java security fixes
+  - label: CA - Apply Java security fixes
     agent: '💻 DEV - ☕ Java Developer'
     prompt: Apply the security mitigations identified in the Java review above.
-    send: false
+    send: true
 ---
 
 # Context

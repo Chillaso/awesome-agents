@@ -6,14 +6,14 @@ model: ['GPT-5.4 (copilot)', 'Claude Sonnet 4.6 (copilot)']
 tools: ['agent', 'read', 'search', 'todo']
 agents: ['💻 DEV - ☕ Java Developer', '💻 DEV - 🐍 Python Developer']
 handoffs:
-  - label: Fix Java review findings
+  - label: CA - Fix Java review findings
     agent: '💻 DEV - ☕ Java Developer'
     prompt: Address the Java review findings identified above.
-    send: false
-  - label: Fix Python review findings
+    send: true
+  - label: CA - Fix Python review findings
     agent: '💻 DEV - 🐍 Python Developer'
     prompt: Address the Python review findings identified above.
-    send: false
+    send: true
 ---
 
 # Context
