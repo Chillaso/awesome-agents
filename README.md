@@ -58,10 +58,11 @@ The repository is built around explicit delegation.
 
 ### Primary flow
 
-1. `Orchestrator` reads the request and determines the dominant workstream.
-2. A specialist agent performs the implementation, analysis, or explanation.
-3. Testing, QA, or security agents can be invoked to validate the result.
-4. The orchestrated outcome is consolidated back into a single response.
+1. `Orchestrator` reads the request, classifies task complexity, and creates a plan before any implementation or delegation begins.
+2. `Orchestrator` uses `GPT-5.4 (copilot)` in Plan mode for simple or medium tasks, and `Claude Opus 4.6 (copilot)` in Plan mode for complex or very complex tasks.
+3. A specialist agent executes the planned implementation, analysis, or explanation work.
+4. Testing, QA, or security agents can be invoked to validate the result.
+5. The orchestrated outcome is consolidated back into a single response.
 
 ### Common handoff patterns
 
@@ -78,7 +79,7 @@ The repository is built around explicit delegation.
 
 ### `🎯 ORCH - 🧭 Orchestrator`
 
-The coordination layer for the whole collection. It reads the task, determines the dominant stack and objective, delegates to the smallest capable specialist, and synthesizes results when more than one agent is involved.
+The coordination layer for the whole collection. It starts by planning, selecting the planning model by task complexity, then delegates to the smallest capable specialist and synthesizes results when more than one agent is involved.
 
 ### `💻 DEV - ☕ Java Developer`
 
@@ -142,9 +143,11 @@ Improves prompt quality for LLM usage. It rewrites prompts for clearer intent, t
 
 ## Models and Tooling
 
-Most implementation, review, and orchestration agents are configured to use `GPT-5.4 (copilot)` and `Claude Sonnet 4.6 (copilot)`. Lightweight explanation and prompt tasks use smaller models, and tester agents are also configured with lighter model options.
+Most implementation, review, and orchestration agents are configured to use `GPT-5.4 (copilot)` and `Claude Sonnet 4.6 (copilot)`. The orchestrator uses planning-first routing, with `GPT-5.4 (copilot)` for simple or medium planning tasks and `Claude Opus 4.6 (copilot)` for complex or very complex planning tasks. Lightweight explanation and prompt tasks use smaller models, and tester agents are also configured with lighter model options.
 
-Across the catalog, the agent capabilities are intentionally limited by tool choice. Some agents can edit and execute, some can only read and search, and orchestration-oriented agents rely more on delegation than direct implementation. That separation helps keep responsibilities explicit.
+Across the catalog, agents now expose the same built-in tool families: `agent`, `read`, `search`, `edit`, `execute`, `todo`, and `web`. Role boundaries are enforced by agent instructions and workflow rather than by restricting tool availability.
+
+All agents also follow a plan-first operating model. The planning depth is role-specific, but every agent is expected to create a brief plan before implementation, review, analysis, documentation, or explanation work.
 
 ## Repository Structure
 
@@ -179,4 +182,4 @@ Across the catalog, the agent capabilities are intentionally limited by tool cho
 
 ## Summary
 
-This agent set is built as a small delivery system rather than a flat list of prompts. The orchestration layer routes work, specialists stay narrow, and review agents provide explicit quality and security checkpoints. That makes the collection suitable for day-to-day engineering work where implementation, validation, and documentation need to stay connected.
+This agent set is built as a small delivery system rather than a flat list of prompts. The orchestration layer plans and routes work, specialists stay narrow by role, and review agents provide explicit quality and security checkpoints. That makes the collection suitable for day-to-day engineering work where planning, implementation, validation, and documentation need to stay connected.
