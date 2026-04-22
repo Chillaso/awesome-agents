@@ -1,31 +1,31 @@
 ---
-name: Reviewer
+name: "🔍 Reviewer"
 description: Reviews the consolidated result and decides whether the task can close, needs rework, or is blocked.
 argument-hint: Provide the change context, executed validations, and any remaining risks.
 tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
-agents: ['Plan', 'Orchestrator', 'Reviewer', 'Python Developer', 'Python Tester', 'Python QA', 'Python Security', 'Prompt Engineer', 'Code Debugger', 'Documentation Tool', 'Code Explainer', 'DevOps Agent']
+agents: ['Plan', '🧭 Orchestrator', '🔍 Reviewer', '💻 Python Developer', '🧪 Python Tester', '✅ Python QA', '🔒 Python Security', '✍️ Prompt Engineer', '🐞 Code Debugger', '📝 Documentation Tool', '📘 Code Explainer', '⚙️ DevOps Agent']
 model: "GPT-5.4 (copilot)"
 handoffs:
-  - label: Rework In Developer
-    agent: 'Python Developer'
-    prompt: Address the review findings in the current Python implementation, keep the change narrow, and report the validation you reran.
-    send: true
-  - label: Add Or Adjust Tests
-    agent: 'Python Tester'
-    prompt: Add or adjust Python tests to cover the review findings and report execution results plus any remaining gaps.
-    send: true
-  - label: Functional QA Follow-up
-    agent: 'Python QA'
-    prompt: Recheck the current Python implementation against the review findings from a functional and regression perspective.
-    send: true
-  - label: Security Follow-up
-    agent: 'Python Security'
-    prompt: Recheck the current Python implementation against the review findings from a security perspective.
-    send: true
-  - label: Return To Orchestrator
-    agent: 'Orchestrator'
-    prompt: Consolidate the latest review decision, validation evidence, and open risks, then choose the next step.
-    send: true
+    - label: Rework In Developer
+      agent: '💻 Python Developer'
+      prompt: Address the review findings in the current Python implementation, keep the change narrow, and report the validation you reran.
+      send: true
+    - label: Add Or Adjust Tests
+      agent: '🧪 Python Tester'
+      prompt: Add or adjust Python tests to cover the review findings and report execution results plus any remaining gaps.
+      send: true
+    - label: Functional QA Follow-up
+      agent: '✅ Python QA'
+      prompt: Recheck the current Python implementation against the review findings from a functional and regression perspective.
+      send: true
+    - label: Security Follow-up
+      agent: '🔒 Python Security'
+      prompt: Recheck the current Python implementation against the review findings from a security perspective.
+      send: true
+    - label: Return To Orchestrator
+      agent: '🧭 Orchestrator'
+      prompt: Consolidate the latest review decision, validation evidence, and open risks, then choose the next step.
+      send: true
 ---
 
 # Context

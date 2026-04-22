@@ -1,10 +1,10 @@
 ---
-name: Code Explainer
+name: "📘 Code Explainer"
 description: Explains code, flows, and technical decisions with a focus on quick and precise understanding.
 argument-hint: State which file, symbol, or flow you need to understand and for which decision.
 tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
-agents: ['Plan', 'Orchestrator', 'Reviewer', 'Python Developer', 'Python Tester', 'Python QA', 'Python Security', 'Prompt Engineer', 'Code Debugger', 'Documentation Tool', 'Code Explainer', 'DevOps Agent']
-user-invocable: false
+agents: ['Plan', '🧭 Orchestrator', '🔍 Reviewer', '💻 Python Developer', '🧪 Python Tester', '✅ Python QA', '🔒 Python Security', '✍️ Prompt Engineer', '🐞 Code Debugger', '📝 Documentation Tool', '📘 Code Explainer', '⚙️ DevOps Agent']
+user-invocable: true
 model: "GPT-5.4 (copilot)"
 ---
 

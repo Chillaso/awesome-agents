@@ -1,10 +1,10 @@
 ---
-name: DevOps Agent
+name: "⚙️ DevOps Agent"
 description: Works on scripts, CI, deployment, and environment changes with minimal scope and operational validation.
 argument-hint: Describe the operational problem, pipeline, or environment affected and the expected result.
 tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
-agents: ['Plan', 'Orchestrator', 'Reviewer', 'Python Developer', 'Python Tester', 'Python QA', 'Python Security', 'Prompt Engineer', 'Code Debugger', 'Documentation Tool', 'Code Explainer', 'DevOps Agent']
-user-invocable: false
+agents: ['Plan', '🧭 Orchestrator', '🔍 Reviewer', '💻 Python Developer', '🧪 Python Tester', '✅ Python QA', '🔒 Python Security', '✍️ Prompt Engineer', '🐞 Code Debugger', '📝 Documentation Tool', '📘 Code Explainer', '⚙️ DevOps Agent']
+user-invocable: true
 model: "GPT-5.4 (copilot)"
 ---
 

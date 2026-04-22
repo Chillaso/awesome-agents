@@ -1,10 +1,10 @@
 ---
-name: Code Debugger
+name: "🐞 Code Debugger"
 description: Investigates failures and isolates root causes with reproducible steps and technical evidence.
 argument-hint: Describe the observed failure, how to reproduce it, and any available error output.
 tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
-agents: ['Plan', 'Orchestrator', 'Reviewer', 'Python Developer', 'Python Tester', 'Python QA', 'Python Security', 'Prompt Engineer', 'Code Debugger', 'Documentation Tool', 'Code Explainer', 'DevOps Agent']
-user-invocable: false
+agents: ['Plan', '🧭 Orchestrator', '🔍 Reviewer', '💻 Python Developer', '🧪 Python Tester', '✅ Python QA', '🔒 Python Security', '✍️ Prompt Engineer', '🐞 Code Debugger', '📝 Documentation Tool', '📘 Code Explainer', '⚙️ DevOps Agent']
+user-invocable: true
 model: "GPT-5.4 (copilot)"
 ---
 

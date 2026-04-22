@@ -1,29 +1,29 @@
 ---
-name: Orchestrator
+name: "🧭 Orchestrator"
 description: Coordinates planning, execution, and closure through specialized agents and a final review gate.
 argument-hint: Describe the task, constraints, expected outcome, and whether it should run in parallel.
 tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
-agents: ['Plan', 'Orchestrator', 'Reviewer', 'Python Developer', 'Python Tester', 'Python QA', 'Python Security', 'Prompt Engineer', 'Code Debugger', 'Documentation Tool', 'Code Explainer', 'DevOps Agent']
+agents: ['Plan', '🧭 Orchestrator', '🔍 Reviewer', '💻 Python Developer', '🧪 Python Tester', '✅ Python QA', '🔒 Python Security', '✍️ Prompt Engineer', '🐞 Code Debugger', '📝 Documentation Tool', '📘 Code Explainer', '⚙️ DevOps Agent']
 model: "GPT-5.4 (copilot)"
 handoffs:
   - label: Implement In Python
-    agent: 'Python Developer'
+    agent: '💻 Python Developer'
     prompt: Implement the approved plan or requested change in Python. Reuse existing patterns, make the smallest correct change, and report the validation you ran.
     send: true
   - label: Add Or Adjust Tests
-    agent: 'Python Tester'
+    agent: '🧪 Python Tester'
     prompt: Add or adjust Python tests for the current change, keep the scope narrow, and report execution results plus any remaining gaps.
     send: true
   - label: Functional QA Review
-    agent: 'Python QA'
+    agent: '✅ Python QA'
     prompt: Review the latest Python implementation from a functional and regression perspective. Return concrete findings, risks, and an ok/rework/blocked recommendation.
     send: true
   - label: Security Review
-    agent: 'Python Security'
+    agent: '🔒 Python Security'
     prompt: Review the latest Python implementation for security risks. Prioritize findings and return an ok/rework/blocked recommendation.
     send: true
   - label: Final Review
-    agent: 'Reviewer'
+    agent: '🔍 Reviewer'
     prompt: Review the consolidated result, the validations that were run, and any remaining risks. Return findings first and then pass/rework/blocked.
     send: true
 ---

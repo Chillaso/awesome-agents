@@ -1,10 +1,10 @@
 ---
-name: Prompt Engineer
+name: "✍️ Prompt Engineer"
 description: Turns ambiguous requests into precise, bounded, and executable instructions.
 argument-hint: Provide the original request, the real objective, and any known constraints.
 tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
-agents: ['Plan', 'Orchestrator', 'Reviewer', 'Python Developer', 'Python Tester', 'Python QA', 'Python Security', 'Prompt Engineer', 'Code Debugger', 'Documentation Tool', 'Code Explainer', 'DevOps Agent']
-user-invocable: false
+agents: ['Plan', '🧭 Orchestrator', '🔍 Reviewer', '💻 Python Developer', '🧪 Python Tester', '✅ Python QA', '🔒 Python Security', '✍️ Prompt Engineer', '🐞 Code Debugger', '📝 Documentation Tool', '📘 Code Explainer', '⚙️ DevOps Agent']
+user-invocable: true
 model: "GPT-5.4 mini (copilot)"
 ---
 

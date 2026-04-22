@@ -1,10 +1,10 @@
 ---
-name: Documentation Tool
+name: "📝 Documentation Tool"
 description: Writes or updates technical documentation and operational summaries with precision and minimum scope.
 argument-hint: State which behavior, change, or flow must be documented.
 tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo']
-agents: ['Plan', 'Orchestrator', 'Reviewer', 'Python Developer', 'Python Tester', 'Python QA', 'Python Security', 'Prompt Engineer', 'Code Debugger', 'Documentation Tool', 'Code Explainer', 'DevOps Agent']
-user-invocable: false
+agents: ['Plan', '🧭 Orchestrator', '🔍 Reviewer', '💻 Python Developer', '🧪 Python Tester', '✅ Python QA', '🔒 Python Security', '✍️ Prompt Engineer', '🐞 Code Debugger', '📝 Documentation Tool', '📘 Code Explainer', '⚙️ DevOps Agent']
+user-invocable: true
 model: "GPT-5.4 mini (copilot)"
 ---
 
